@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#heading {
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0px;
+  height: 60px;
+  font-size: 25px; /* Default font size for heading */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 500px) {
+  #heading {
+    font-size:14px; /* Adjust font size for smaller screens */
+    padding: 5px 0; /* Adjust padding for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0; /* Remove default padding for the list */
+}
+
+li {
+  display: flex;
+  justify-content: space-between; /* Align content space evenly */
+  align-items: center; /* Vertically center the content */
+  background-color: rgba(85, 129, 85, 0.47);
+  padding: 10px;
+  margin: 10px;
+  min-height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+/* Adjust styling for h2, h3, and img inside li as needed */
+li h2 {
+  margin-left: 0px;
+  font-size: 1.2rem;
+}
+
+li h3 {
+  margin-left: 0px;
+  font-size: 1rem;
+}
+
+li img { margin-left:8px;
+  max-width: 50px; /* Set a maximum width for the coin logo */
+  margin-right: 10px;
+}
+
+.header-row {
+  background-color: #333; /* Add a background color */
+  color: white; /* Text color */
+  font-weight: bold; /* Make text bold */
+}
+
+.header-row h2 { margin-right: 27px;
+  font-size: 1.2rem; /* Adjust font size for h2 */
+}
+
+.header-row h3 { margin-right: 27px;
+  font-size: 1rem; /* Adjust font size for h3 */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  li img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  li h2 {
+    font-size: 1rem;
+  }
+
+  li h3 {
+    font-size: 0.9rem;
+  }
+
+  li img {
+    max-width: 40px;
   }
 }
